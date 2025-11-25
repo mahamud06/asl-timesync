@@ -30,6 +30,29 @@
         a:hover {
             text-decoration: underline;
         }
+        .download-container {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00539C;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .download-button:hover {
+            background-color: #003e73;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -89,5 +112,19 @@
     <h2>Updates to This Policy</h2>
     <p>We may update this privacy policy periodically to reflect changes in practices or regulatory requirements.<br />
     The latest version will always be available at the same URL.</p>
+
+    <!-- NEW DOWNLOAD BUTTON: Updated to use the direct GitHub RAW file link for the APK -->
+    <div class="download-container">
+        <h3>Download the Companion App</h3>
+        <p>Install the mobile app to manage your account on the go.</p>
+        <!-- ABSOLUTE URL to the GitHub RAW content file. This is the correct way to link directly to a file download on GitHub when it's not a Release Asset. -->
+        <a href="https://raw.githubusercontent.com/mahamud06/asl-timesync/main/TimeSync%20Companion.apk" class="download-button" download="TimeSync_Companion.apk">
+            Download Timesync Companion.apk
+        </a>
+        <p style="font-size: 0.8em; color: #666; margin-top: 10px;">
+            This link directs to the raw APK file hosted on GitHub's main branch.
+        </p>
+    </div>
+
 </body>
 </html>
