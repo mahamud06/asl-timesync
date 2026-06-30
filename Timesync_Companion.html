@@ -60,7 +60,7 @@
       margin: 12px 0 24px;
     }
 
-    /* Download APK Button - same as before */
+    /* Download APK Button */
     #downloadBtn {
       background: #10b981;
       color: white;
@@ -76,7 +76,7 @@
       cursor: pointer;
     }
 
-    /* Slideshow - 5 real screenshots */
+    /* Slideshow configured for 9 real screenshots */
     .slideshow {
       width: 100%;
       height: 480px;
@@ -89,13 +89,13 @@
 
     .slides {
       display: flex;
-      width: 500%;
+      width: 900%; /* 9 slides = 900% width */
       height: 100%;
-      animation: slide 20s infinite;
+      animation: slide 36s infinite; /* Increased duration to give 9 slides comfortable view time */
     }
 
     .slide {
-      width: 20%;
+      width: 11.111%; /* 100% / 9 slides = 11.111% */
       background-size: cover;
       background-position: center top;
     }
@@ -105,14 +105,23 @@
     .slide:nth-child(3) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/03.jpg'); }
     .slide:nth-child(4) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/04.jpg'); }
     .slide:nth-child(5) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/05.jpg'); }
+    .slide:nth-child(6) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/06.jpg'); }
+    .slide:nth-child(7) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/07.jpg'); }
+    .slide:nth-child(8) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/08.jpg'); }
+    .slide:nth-child(9) { background-image: url('https://raw.githubusercontent.com/mahamud06/asl-timesync/main/09.jpg'); }
 
+    /* Recalculated 9-step timeline percentages with smooth translate increments */
     @keyframes slide {
-      0%, 16%   { transform: translateX(0); }
-      20%, 36%  { transform: translateX(-20%); }
-      40%, 56%  { transform: translateX(-40%); }
-      60%, 76%  { transform: translateX(-60%); }
-      80%, 96%  { transform: translateX(-80%); }
-      100%      { transform: translateX(0); }
+      0%, 9%     { transform: translateX(0); }
+      11%, 20%   { transform: translateX(-11.111%); }
+      22%, 31%   { transform: translateX(-22.222%); }
+      33%, 42%   { transform: translateX(-33.333%); }
+      44%, 53%   { transform: translateX(-44.444%); }
+      55%, 64%   { transform: translateX(-55.556%); }
+      66%, 75%   { transform: translateX(-66.667%); }
+      77%, 86%   { transform: translateX(-77.778%); }
+      88%, 97%   { transform: translateX(-88.889%); }
+      100%       { transform: translateX(0); }
     }
 
     .note {
@@ -132,14 +141,16 @@
     
     <p>Internet needed after install<br>Fast • Secure • 100% Private</p>
 
-    <!-- Only this green Download button (exactly like before) -->
     <button id="downloadBtn" onclick="window.location.href='https://raw.githubusercontent.com/mahamud06/asl-timesync/main/TimeSync%20Companion.apk'">
       Download APK (Android)
     </button>
 
-    <!-- 5 Screenshots -->
     <div class="slideshow">
       <div class="slides">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
         <div class="slide"></div>
         <div class="slide"></div>
         <div class="slide"></div>
@@ -155,5 +166,3 @@
 
 </body>
 </html>
-
-
